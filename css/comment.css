@@ -1,0 +1,18 @@
+.com-container {
+  border: 1px red solid;
+  position: relative;
+  display: flex;
+  flex-direction: row; }
+
+.com-avatar img {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; }
+
+.com-user {
+  display: flex;
+  flex-direction: row; }
+
+/*# sourceMappingURL=comment.css.map */

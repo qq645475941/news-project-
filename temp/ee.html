@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #content1 {
+            width: 200px;
+        }
+
+        .cc1 {
+
+            margin: 5px;
+            border: 1px solid blue;
+        }
+
+        .www {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="content1"></div>
+
+<div class="cc1">
+    <div class="flex">
+        <div class="commentPhoto">
+            <img src="' + imgSrc + '" alt="">
+        </div>
+        <div class="commentItem">
+            <div class="flex">
+                <div>
+                    <a>' + userName + '</a>
+                    <p>' + con[ss[j]].user.location + '</p>
+                </div>
+                <div class="vote"><p>' + con[ss[j]].vote + '顶</p></div>
+            </div>
+            <div class="com-content">' + con[ss[j]].content + '</div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    var content = document.getElementById('content1');
+    var num = [
+        '123,456,789,err,eeee,eeee',
+        'ddddd,333,66rty,78676',
+        '3344,5555'
+    ];
+    floor(content, num);
+    function floor(container, array, content) {
+        for (var i = 0; i < array.length; i++) {
+            var ss = array[i].split(',');
+            var module = document.createElement('div');
+            module.setAttribute('class', 'www');
+            container.appendChild(module);
+            for (var j = 0; j < ss.length; j++) {
+                var conChild1 = module.querySelectorAll('.cc1')[j - 1];
+                var qq = conChild1 || module;
+                qq.insertAdjacentHTML('afterbegin', '<div class="cc1"><p>' + ss[j] + '</p></div>');
+            }
+        }
+    }
+</script>
+</html>

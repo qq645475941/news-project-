@@ -1,0 +1,44 @@
+
+<ion-content style="padding-top: 90px">
+    <ion-refresher
+            pulling-text="下拉刷新..."
+            on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <ion-list
+            show-delete="shouldShowDelete"
+            show-reorder="shouldShowReorder"
+            can-swipe="listCanSwipe">
+        <ion-item ng-repeat="item in items"
+                  class="item-thumbnail-left"  ui-sref="topicDetail({id:item.postid})">
+
+            <img  ng-src="{{item.imgsrc}}">
+            <h2 style="white-space: normal">{{item.title}}</h2>
+            <div class="list-source">
+                <span>{{item.source}}</span>
+                <span>{{item.replyCount}}  跟帖</span>
+            </div>
+
+            <ion-option-button class="button-positive"
+                               ng-click="share(item)">
+                分享
+            </ion-option-button>
+            <ion-option-button class="button-info"
+                               ng-click="edit(item)">
+                编辑
+            </ion-option-button>
+            <ion-delete-button class="ion-minus-circled"
+                               ng-click="items.splice($index, 1)">
+            </ion-delete-button>
+            <ion-reorder-button class="ion-navicon"
+                                on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+            </ion-reorder-button>
+
+        </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll
+            on-infinite="loadMore()"
+            distance="1%">
+    </ion-infinite-scroll>
+</ion-content>

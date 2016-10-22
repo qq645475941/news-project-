@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="starter" swap  style="font-size:41.4px">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/jquery-3.1.1.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular/angular-sanitize.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/heroes.js"></script>
+    <script src="js/service/service.js"></script>
+    <script src="js/directive/navBar.js"></script>
+    <script src="js/directive/navListCard.js"></script>
+    <script src="js/directive/swap.js"></script>
+    <script src="js/directive/moreComment.js"></script>
+    <script src="js/directive/moreComment1.js"></script>
+
+
+</head>
+<body>
+<ion-nav-view >
+
+</ion-nav-view>
+
+</body>
+<script>
+//    var dpr = window.devicePixelRatio;
+//    document.documentElement.style.fontSize = dpr*window.innerWidth / 10 + 'px';
+//    var meta = document.querySelector('meta');
+//    meta.setAttribute('content', 'initial-scale=' + 1/dpr + ', maximum-scale=' + 1/dpr + ', minimum-scale=' + 1/dpr + ', user-scalable=no');
+</script>
+</html>

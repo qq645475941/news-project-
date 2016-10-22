@@ -1,0 +1,240 @@
+/* Empty. Add your own CSS if you like */
+$baseFontSize: 41.4px;
+@function pxToRem($px) {
+  @return $px /  $baseFontSize * 1rem /3;
+}
+
+.my-bar {
+  padding: 0;
+  z-index: 8;
+}
+
+.nav-bar-container {
+  position: relative;
+
+}
+
+.navBar {
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  padding: 13px 0;
+  border-bottom: 1px solid lightgray;
+  background: white;
+  transition: left 1s;
+  z-index: -1;
+}
+
+.navBar .item-bar {
+  display: inline-block;
+  font-size: 15px;
+  margin: 0px 14px;
+  color: #5f5f5f;
+}
+
+.navBar .item-bar a {
+  color: #5f5f5f;
+
+}
+
+.navBar .item-bar a.checked {
+  font-size: 18px;
+  color: #df3031;
+}
+
+.addNav {
+  font-size: 14px;
+  color: #8c8c8c;
+  position: fixed;
+  right: 0;
+  padding: 14px;
+  top: 0;
+  background: #f6f6f6;
+  line-height: 14px;
+}
+
+.addNav span {
+  font-size: 17px;
+  transition: transform 1s;
+  display: inline-block;
+}
+
+.addNav span.checked {
+  transform: rotate(45deg);
+}
+
+.topicPage {
+  position: absolute;
+  top: -700px;
+  width: 414px;
+  height: 650px;
+  background: #f7f7f7;
+  padding: 0 15px;
+  z-index: -2;
+  transition: top 1s;
+}
+
+.topicPage li {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  border: 2px solid #dfdfdf;
+  border-radius: 30px;
+  margin: 9px 13px;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.topicPage .close-circled {
+  position: absolute;
+  left: -4px;
+  top: -11px;
+  color: gray;
+  opacity: 0;
+}
+
+.topicPage.press .close-circled {
+  opacity: 1;
+}
+
+.my-detail img {
+  width: pxToRem(1185px);
+  //height: pxToRem(788px);
+  //margin: 0 pxToRem(30px);
+}
+
+.list-source {
+  font-size: 12px;
+  color: #989898;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-source span {
+  margin-top: 16px;
+}
+
+.detail-relative_sys {
+  margin-top: 30px;
+}
+
+.relative_sys {
+  color: #ff7972;
+}
+
+.com-input {
+  input {
+    width: 7.5rem;
+    border-bottom: 1px solid #edeff3;
+
+  }
+}
+
+.commentsBox {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.commentItem {
+  padding: 10px 20px;
+  width: 95%;
+  border-bottom: 1px solid lightgray;
+}
+
+.commentPhoto img {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.flex {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.vote {
+  position: absolute;
+  right: 3px;
+}
+
+.watchMore {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.com-container {
+  display: flex;
+  flex-direction: row;
+  margin: 3px;
+  border-bottom: 1px solid #edeff3;
+}
+
+.com-item {
+  padding: 10px 10px;
+  width: 100%;
+}
+
+.com-floor {
+  padding: 1px;
+  border: 1px solid #ceceaf;
+  background-color: #f8f8f1;
+}
+
+.user-info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  .vote {
+    position: absolute;
+    right: 2px;
+  }
+}
+
+.hot-new-com {
+  margin: 10px 10px;
+  width: pxToRem(204px);
+  height: pxToRem(70px);
+  color: #ffffff;
+  background-color: #cd3738;
+  text-align: center;
+  line-height: pxToRem(70px);
+}
+
+.btn-back {
+  display: inline-block;
+  width: pxToRem(94px);
+  height: pxToRem(94px);
+  border: 2px solid #d1d1d1;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #d1d1d1;
+  text-align: center;
+  margin: pxToRem(10px) pxToRem(30px);
+
+}
+
+.replyCount {
+  display: inline-block;
+  //width: pxToRem(180px);
+  height: pxToRem(72px);
+  border-radius: pxToRem(36px);
+  position: absolute;
+  right: pxToRem(30px);
+  background-color: #cd3738;
+  margin: pxToRem(16px) 0;
+  span {
+    color: #ffffff;
+    margin: 0 pxToRem(20px);
+    line-height: pxToRem(72px);
+  }
+
+}
+
+

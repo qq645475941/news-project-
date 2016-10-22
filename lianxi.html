@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="starter" swap  style="font-size:41.4px">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <script src="lib/jquery-3.1.1.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular/angular-sanitize.min.js"></script>
+
+</head>
+<body ng-controller="test">
+        <div ng-repeat="i in item">
+            {{i}}
+        </div>
+        <div>
+            {{forItem}}
+        </div>
+</body>
+<script>
+    angular.module('starter',[])
+            .controller('test',function ($scope) {
+                $scope.item=[
+                        'wwww','ssss','bbb'
+                ];
+                for(var i=0;i<$scope.item.length;i++){
+                    $scope.forItem=$scope.item[i];
+                }
+
+            })
+</script>
+</html>

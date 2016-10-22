@@ -1,0 +1,28 @@
+<ion-header-bar >
+    <div >
+        <div class="btn-back" onclick="history.back()"><</div>
+    </div>
+</ion-header-bar>
+<ion-content>
+    <div style="position: relative">
+        <more-comment data="data">
+
+        </more-comment>
+    </div>
+    <div style="position: relative">
+        <new-comment data="newCommentData">
+
+        </new-comment>
+    </div>
+    <ion-infinite-scroll
+            on-infinite="loadMore()"
+            distance="1%">
+    </ion-infinite-scroll>
+</ion-content>
+<ion-footer-bar >
+    <div class=" item-input-inset com-input">
+        <i class="icon ion-edit placeholder-icon"></i>
+        <input type="text" placeholder="写跟贴" >
+        <span>发送</span>
+    </div>
+</ion-footer-bar>
